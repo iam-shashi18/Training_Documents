@@ -209,4 +209,18 @@ chown -R devopsadmin /opt/tomcat
 		Publish Over SSH Plugin is used to copt the artifacts from Jenkins Slave Node to Tomcat Server
 		
 		Install Publish Over SSH Plugin in Jenkins Master.
+        Go to System configurations in jenkins Master, we can see publish over ssh plugin to configure
+
+		clicl on add sever:
+			Name: QA_Tomcat_WebAppServer
+			Hostname: Tomcat server private Ip
+			username: devopsadmin (user that we have created)
+			remote dir: /opt/tmcat/webapps
+
+	click on advanced and enalble password autuntication
+	copy private key from tomcat server cd from home dir to .ssh and copy and paste it in the key section
+	click on test configuration it should get success
+In future if we need to add any no of server like copying artifacts to Test or Prod just will add here, k8s cluster als we can add here
+
+
 
