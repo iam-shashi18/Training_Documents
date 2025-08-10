@@ -502,7 +502,13 @@ Day 16 : 4th August 2025
 					target/*.war													/opt/tomcat/webapps
 																					/opt/tomcat/webapps/*.war
 																					
-																					
+go to pipeline project -> configure, in snippet generator -> select ssh publisher
+select the server that we have created QA Tomact
+sourcL: target/*.war
+remove prefix: target/
+Remote directory: .    --> . represents current dir of tomcat server (ie /opt/tomcat/webapps)
+now click on generate pipeline script
+
 sshPublisher(publishers: [sshPublisherDesc(configName: 'QA-Tomcat_WAS', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '.', remoteDirectorySDF: false, removePrefix: 'target/', sourceFiles: 'target/*.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
 
 
@@ -533,6 +539,9 @@ pipeline {
 }
 
 
+click on build and after completion check in webapps folder .war file will be created
+now hit the tomcat ip:demo-1.0 snapshot(we can see it in webapps folder)
+
 	Build Triggers :::
 	
 		- To Automate the Jenkins Pipeline Projects 
@@ -557,10 +566,14 @@ pipeline {
 		
 			- Used to trigger the jenkins Job whenever there is any commit happened in the remote repository
 			- github webhook has be configured in the remote repository by using the jenkins URL
-		
-				payload url:	http://65.0.122.168:8080/github-webhook/
-					- latest Jenkins 
-						http://<Public_IP_Address>:8080/github-webhook/
+
+		go to repository in git -> settings  ->click on webhooks on left side -> add webhook -> update below
+
+				payload url:	http://65.0.122.168:8080/github-webhook/ (take public ip)
+					- latest Jenkins http://<Public_IP_Address>:8080/github-webhook/
+when to trigger: push and add webhook
+
+now enable github hook trigger in job configuration ->apply
 		
 		-> Poll-SCM 
 		
