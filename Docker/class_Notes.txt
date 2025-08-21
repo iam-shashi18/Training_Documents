@@ -473,6 +473,8 @@ Day 20 : 11th August 2025
 								
 			Jenkins_Build_Server_Node	==> Perform Application Build 
 										==> git,jdk,maven,docker
+                   add user to access dccker==>      usermod -aG docker devopsadmin
+
 	
 
 	- Add devopsadmin user to docker group :
