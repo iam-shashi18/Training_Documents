@@ -203,7 +203,7 @@ Next :::
 	
 
 #########################
-Day 22 : 13th August 2025
+Day 22 : 14th August 2025
 #########################	
 
 	- Working with Kubernetes Objects
