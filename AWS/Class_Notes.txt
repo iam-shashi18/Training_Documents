@@ -1,0 +1,225 @@
+#########################
+Day 33 : 4th Sep. 2025
+#########################
+
+	AWS Solution Architect Associate Level!
+	
+	Introduction to Cloud :::
+
+		What is Cloud Computing?
+		
+		IAM Services
+		
+		EC2 Services 
+		
+		
+		
+		https://docs.aws.amazon.com/cli/latest/userguide/cli_code_examples.html
+		
+Next :
+
+	IAM Service Demo
+	EC2 Service!
+	
+	
+	https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html
+
+
+
+#########################
+Day 34 : 5th Sep. 2025
+#########################		
+	
+	- IAM Services :
+	
+		- Create User 
+		
+		- Create User  Group 
+		
+		- Policies 
+		
+		- Roles 
+		
+		
+	- Security Credentials 
+	
+		Create IAM User :
+		
+			- AWS Console 
+			
+			- AWS Cli 
+			
+			- AWS SDK
+			
+	- Associate / 
+	
+	
+	- RBAC ::::
+	
+		Manager 		=> DevOps / Develop / Security / Storage / Networking 
+		
+		Lead 
+		
+		Associate 
+
+
+		
+
+#######################
+Day 35 : 8th Sep. 2025
+#######################
+
+	EC2 Services!	
+	
+		AMI :	AMI contains the operating system, application server, and applications for your instance.
+		
+		Create an AMI and Copy to any target Region.
+		
+		
+		VM - Jenkins_Server 
+		
+			OS -> Ubuntu 
+			
+		Server Templates ::::		
+		
+		Docker :::
+		
+			Containers				VM  
+			
+			Images 					AMI 
+		
+		
+	EBS Volumes ::::
+	
+		- Elastic Block Store !
+		
+		
+	EFS Volumes ::::
+	
+	S3 ::::
+	
+	
+	
+	AWS CodeCommit ==> Distributed VCS in AWS.
+	
+	
+	Use S3 Buckt to host static web appln. 
+
+
+	
+	
+#######################
+Day 36 : 9th Sep. 2025
+#######################
+
+	S3 
+	
+	Volumes 
+	
+	Dbase Services 
+	
+	Networking :
+	
+		VMs - dedicated VPC
+		
+		
+	EC2 Instance -> AMI 
+	
+		-> Kubernetes / Jenkins / Ansible - AC / Target Nodes -> Provision
+		
+		-> Configure Kube_WN1 ->		
+		
+	UserData :
+	
+	#!/bin/bash
+	yum update -y
+	yum install -y httpd
+	systemctl start httpd
+	systemctl enable httpd
+	echo "<h1>Hello! You accessing web server - $(hostname -f)</h1>" > /var/www/html/index.html
+	
+	
+	192.168.0.0/16	==> Home 
+	
+	172.0.0.0/16	==> AWS Default VPC 
+	
+	10.0.0.0/16		==> For any Big Network
+	
+	Networking :
+	
+		VMs - dedicated VPC
+		Subnet :
+			- Public Subnet & Private Subnet
+			
+			EC2 Instance using IAM Role and S3
+			
+		Route Table 
+		Route Table Asso.
+		Internet Gateway
+		
+
+#######################
+Day 37 : 11th Sep. 2025
+#######################
+
+https://docs.aws.amazon.com/
+
+	Networking :
+	
+		Amazon VPC
+		
+		Subnet :
+			- Public Subnet & Private Subnet
+						
+		Route Table 
+		Route Table Asso.
+		Internet Gateway
+		
+		
+		
+#######################
+Day 38 : 12th Sep. 2025
+#######################
+
+	Working with AWS VPC ::::
+	
+		AWS Infra-Structure  :
+		
+			- Create an AWS Infra Architecture Diagram
+		
+		
+		
+	VPC Connectivity Methods :::
+	
+		
+	
+	Public Subnet ::::
+	
+		VPC - PL1-VPC-A
+		
+				- PL1-VPC-A-IGW
+				
+				- PL1-VPC-A-Public			
+				
+				- PL1-VPC-A-Public-RT				
+				
+				- PL1-VPC-A-SG1
+		
+		
+	Private Subnet ::::
+	
+		VPC - PL1-VPC-A
+		
+				- PL1-VPC-A-Private 
+				
+				- PL1-VPC-A-Private-RT
+				
+				- PL1-VPC-A-SG2
+				
+				
+				
+	Dedicated Network for : Kube_Cluster / Test Server  /  DBase Servers 	
+		
+Next ::
+	
+	VPC Connectivity Methods :::
